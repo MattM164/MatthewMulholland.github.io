@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew Mulholland Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background: linear-gradient(to bottom, #00ff00, #0000ff);
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+
+        .sidebar ul {
+            list-style: none; /* Remove default bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li a {
+              text-decoration: none; /* Remove default underline */
+              color: white; /* Default text color */
+              padding: 10px;
+              display: block;
+          }
+
+          .sidebar ul li a.selected,
+          .sidebar ul li a:hover {
+              background-color: #f0f0f0; /* Same as background color */
+              color: black;
+          }
+
+          .sidebar ul li a:visited {
+              color: white; /* Ensure visited links remain the same color */
+          }
+
+        .sidebar .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin: 0 auto 20px auto;
+            background-image: url('profilepic.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        #home.selected {
+            background-color: #f0f0f0; /* Same as background color */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="avatar"></div>
+            <ul>
+                <li><a href="index.html" class="selected">Home</a></li>
+                <li><a href="ProjectTab.html">Projects</a></li>
+                <li><a href="Contacts.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+          <!--This is dumb-->
+            <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+
+            <h1>Matthew Mulholland</h1>
+            <hr>
+            <p>Results-driven computer science graduate with a passion for technology, seeking a position to apply and advance technical skills in innovative software development.</p>
+            <h2>Skills</h2>
+            <p>
+              Programming Languages: C++, C#
+              <br>
+              Software: Unity, Visual Studio Code, Firebase, Rest API
+              <br>
+              Related Coursework: Data Structures, Algorithms, Computer Architecture, Game Engine Design
+              <br>
+              Strong Communication and Leadership Skills
+              <br>
+
+            </p>
+            <h2>Education</h2>
+            <p>
+              Ohio University, Athens OH
+              <br>
+              B.S. Computer Science
+              <br>
+              I.B.M. Artificial Intelligence Essentials Certificate
+
+              <br>
+
+            </p>
+
+            <h2>Work Experience</h2>
+            <p>
+              Ohio University Campuses, IT Support and Online Learning Operator (May 2017 – May 2023)
+              <br>
+               •	Online Learning Network Operator and IT Support Technician
+               <br>
+               •	Managed classes that are livestreamed to students and took help desk calls and tickets for the University.
+               <br>
+              Muskingum Valley Scout Reservation Summer Camp Staff (June – August 2017 & 2018)
+              <br>
+               •	Served as STEM Instructor for 800 scouts over 8 weeks teaching Programming and Digital Tech.
+
+              <br>
+
+            </p>
+            <p></p>
+            <p></p>
+            <p></p>
+
+        </div>
+    </div>
+    <script>
+        const navItems = document.querySelectorAll('.sidebar li');
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the 'selected' class from all items
+                navItems.forEach(navItem => {
+                    navItem.classList.remove('selected');
+                });
+                // Add the 'selected' class to the clicked item
+                item.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
